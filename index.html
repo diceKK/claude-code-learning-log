@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Claude Code 学習記録｜2日間のポートフォリオ</title>
+  <meta name="description" content="2日間で Claude Code を学んだ過程と成果を、スクリーンショット15枚で紹介します。">
+  <meta property="og:title" content="Claude Code 学習記録｜2日間のポートフォリオ">
+  <meta property="og:description" content="2日間で Claude Code を学んだ過程と成果を、スクリーンショット15枚で紹介します。">
+  <meta property="og:type" content="website">
+  <!-- og:image と og:url は絶対 URL が必要です。公開時に README の「絶対 URL の差し替え」の手順でコメントを外してください。 -->
+  <!-- <meta property="og:image" content="https://dicekk.github.io/<リポジトリ名>/images/08-seo.png"> -->
+  <!-- <meta property="og:url" content="https://dicekk.github.io/<リポジトリ名>/"> -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へスキップ</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__title" href="#top" id="site-title"></a>
+      <nav class="site-nav" aria-label="ページ内の移動">
+        <ul class="site-nav__list">
+          <li><a href="#process">過程</a></li>
+          <li><a href="#featured">注目事例</a></li>
+          <li><a href="#gallery">成果</a></li>
+          <li><a href="#made">自作したもの</a></li>
+          <li><a href="#reflection">振り返り</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <noscript><p class="notice">このページの表示には JavaScript を有効にしてください。</p></noscript>
+
+    <section id="top" class="hero" aria-labelledby="hero-heading">
+      <div class="hero__media" id="hero-media"></div>
+      <div class="hero__body">
+        <p class="hero__period" id="hero-period"></p>
+        <h1 class="hero__heading" id="hero-heading"></h1>
+        <p class="hero__lead" id="hero-lead"></p>
+        <div class="hero__actions">
+          <a class="btn btn--on-photo" href="#process">過程を見る</a>
+          <a class="btn btn--on-photo" href="#gallery">成果を見る</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="stats" class="band-inverse" aria-label="数字で見る2日間">
+      <div class="container">
+        <ul class="stats" id="stats-list"></ul>
+      </div>
+    </section>
+
+    <section id="featured" class="section" aria-labelledby="featured-title">
+      <div class="container">
+        <h2 id="featured-title">注目事例</h2>
+        <div class="featured-grid" id="featured-list"></div>
+      </div>
+    </section>
+
+    <nav id="index" class="section section--tight" aria-label="学習ステップの目次">
+      <div class="container">
+        <h2>学習ステップ</h2>
+        <ol class="step-index" id="index-list"></ol>
+      </div>
+    </nav>
+
+    <section id="process" class="section" aria-labelledby="process-title">
+      <div class="container">
+        <h2 id="process-title">成長の過程</h2>
+        <ol class="timeline" id="process-list"></ol>
+      </div>
+    </section>
+
+    <section id="gallery" class="section" aria-labelledby="gallery-title">
+      <div class="container">
+        <h2 id="gallery-title" tabindex="-1">成果ギャラリー</h2>
+        <div class="filters" id="gallery-filters" role="group" aria-label="段階で絞り込む"></div>
+        <p class="gallery-count" id="gallery-count" aria-live="polite"></p>
+        <ul class="gallery-grid" id="gallery-grid"></ul>
+      </div>
+    </section>
+
+    <section id="made" class="section" aria-labelledby="made-title">
+      <div class="container">
+        <h2 id="made-title">自作したもの</h2>
+        <div class="made">
+          <div class="made__group">
+            <h3 id="made-skills-title"></h3>
+            <ul class="made__list" id="made-skills"></ul>
+          </div>
+          <div class="made__group">
+            <h3 id="made-agents-title"></h3>
+            <ul class="made__list" id="made-agents"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reflection" class="band-inverse section" aria-labelledby="reflection-title">
+      <div class="container">
+        <h2 id="reflection-title"></h2>
+        <div class="reflection__body" id="reflection-body"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <ul class="site-footer__notes" id="footer-notes"></ul>
+      <p class="site-footer__top"><a href="#top">ページ先頭へ</a></p>
+    </div>
+  </footer>
+
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-title" hidden>
+    <div class="lightbox__inner">
+      <div class="lightbox__media" id="lightbox-media"></div>
+      <div class="lightbox__panel">
+        <p class="meta lightbox__meta" id="lightbox-meta"></p>
+        <h3 id="lightbox-title"></h3>
+        <p class="metric" id="lightbox-metric" hidden></p>
+        <dl class="story">
+          <div><dt>やりたかったこと</dt><dd id="lightbox-goal"></dd></div>
+          <div><dt>やったこと</dt><dd id="lightbox-action"></dd></div>
+          <div><dt>結果</dt><dd id="lightbox-result"></dd></div>
+        </dl>
+        <ul class="tags" id="lightbox-tags"></ul>
+        <p class="lightbox__pos" id="lightbox-pos"></p>
+        <div class="lightbox__controls">
+          <button type="button" class="btn btn--on-photo" id="lightbox-prev" aria-label="前の作品へ">前へ</button>
+          <button type="button" class="btn btn--on-photo" id="lightbox-next" aria-label="次の作品へ">次へ</button>
+          <button type="button" class="btn btn--on-photo" id="lightbox-close" aria-label="閉じる">閉じる</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
